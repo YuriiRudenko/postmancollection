@@ -13,7 +13,7 @@ do
     curl -X POST http://localhost:9292/api/v1/products \
       -H 'Cache-Control: no-cache' \
       -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
-      -F "product[name]=Product$j" \
+      -F "product[name]=Product$i-$j" \
       -F "product[category_id]=$id" \
       -F "product[price]=$price"
       echo "\n";
