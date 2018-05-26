@@ -27,6 +27,52 @@
 			"response": []
 		},
 		{
+			"name": "track product view",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:9292/api/v1/products/2/track_view",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"2",
+						"track_view"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "track product purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:9292/api/v1/products/2/purchase",
+					"host": [
+						"localhost"
+					],
+					"port": "9292",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"2",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "get products by category",
 			"request": {
 				"method": "GET",
@@ -78,21 +124,27 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "name",
+							"key": "product[name]",
 							"value": "Product 123",
 							"description": "",
 							"type": "text"
 						},
 						{
-							"key": "category_id",
+							"key": "product[category_id]",
 							"value": "4",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "product[price]",
+							"value": "123",
 							"description": "",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost:9292/api/v1/products/1",
+					"raw": "localhost:9292/api/v1/products/2",
 					"host": [
 						"localhost"
 					],
@@ -101,7 +153,7 @@
 						"api",
 						"v1",
 						"products",
-						"1"
+						"2"
 					]
 				}
 			},
@@ -138,20 +190,8 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "name",
+							"key": "category[name]",
 							"value": "Product1\n",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "created_at",
-							"value": "2018-05-25 21:19:22.283140",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "updated_at",
-							"value": "2018-05-25 21:19:22.283140",
 							"description": "",
 							"type": "text"
 						}
@@ -181,28 +221,20 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "name",
+							"key": "product[name]",
 							"value": "Product1\n",
 							"description": "",
 							"type": "text"
 						},
 						{
-							"key": "created_at",
-							"value": "2018-05-25 21:19:22.283140",
-							"description": "",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "updated_at",
-							"value": "2018-05-25 21:19:22.283140",
-							"description": "",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "category_id",
+							"key": "product[category_id]",
 							"value": "3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "product[price]",
+							"value": "456",
 							"description": "",
 							"type": "text"
 						}
@@ -232,20 +264,8 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "name",
+							"key": "categories[name]",
 							"value": "Product2\n",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "created_at",
-							"value": "2018-05-25 21:19:22.283140",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "updated_at",
-							"value": "2018-05-25 21:19:22.283140",
 							"description": "",
 							"type": "text"
 						}
